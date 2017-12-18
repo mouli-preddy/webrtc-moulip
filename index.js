@@ -10,6 +10,8 @@ var app = http.createServer(function(req, res) {
   fileServer.serve(req, res);
 }).listen(port);
 
+console.log("listening to port as >>>>>>>>>>>>", port);
+
 var io = socketIO.listen(app);
 io.sockets.on('connection', function(socket) {
 
